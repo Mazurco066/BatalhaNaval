@@ -226,12 +226,12 @@ public class Jogo {
             break;
             
             case 0:
-                System.out.println("Computador Errou disparo nas coordenadas: "  + (tiro[0]) + ":" + (tiro[1]));
+                System.out.println("Computador Errou disparo nas coordenadas: "  + (tiro[0]+1) + ":" + (tiro[1]+1));
                 System.out.println("\n--------------------------------------------------------------------------------------------------------------------------\n");
             break;
             
             case 1:
-                System.out.println("Computador Acertou disparo nas coordenadas: "  + (tiro[0]) + ":" + (tiro[1]));
+                System.out.println("Computador Acertou disparo nas coordenadas: "  + (tiro[0]+1) + ":" + (tiro[1]+1));
                 System.out.println("\n--------------------------------------------------------------------------------------------------------------------------\n");
                 this.campoComputador.incrementaAcertos();
                 verificaGanhador();

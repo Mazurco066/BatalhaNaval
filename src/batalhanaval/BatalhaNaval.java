@@ -19,6 +19,66 @@ public class BatalhaNaval {
         Jogo gameplay = new Jogo();
         Scanner sc = new Scanner(System.in);
         
+        boolean posicionou = false;
+        boolean sair = false;
+        int opc;
+        
+        do{
+            System.out.println("MENU DO JOGO");
+            System.out.println("1 - Posicionar Seus Navios");
+            System.out.println("2 - Ver Posicionamento de Seus Navios");
+            System.out.println("3 - Iniciar o Jogo");
+            System.out.println("4 - Sair");
+            opc = Integer.parseInt(sc.nextLine());
+            
+            switch (opc){
+                
+                case 1:
+                    if (!posicionou){
+                        posicionar(gameplay);
+                        posicionou = true;
+                    }
+                    else{
+                        System.out.println("Você ja posicionou seus navios! Comece um novo jogo para posicionar novamente!");
+                    }
+                break;
+                
+                case 2:
+                    if (posicionou){
+                        verNavios(gameplay);
+                    }
+                    else{
+                        System.out.println("Posicione seus Navios primeiro!");
+                    }
+                    
+                break;
+                
+                case 3:
+                    if (posicionou){
+                        iniciarJogo(gameplay);
+                        sair = true;
+                    }
+                    else{
+                        System.out.println("Posicione seus Navios antes de começar Jogo!");
+                    }
+                break;
+                
+                case 4:
+                    sair = true;
+                break;
+                
+                default:
+                    System.out.println("Opção Inválida!");
+            }
+            
+        }while(!sair);
+        
+        
+        
+    }
+    
+    public static void posicionar(Jogo gameplay){
+        
         //jogador escolhe onde posicionará seus navios
         gameplay.posicionarNavio(5, "PORTA AVIÕES - Ocupa 5 espaços em linha RETA");       //Navio 1 - porta aviões
         gameplay.posicionarNavio(4, "NAVIO DE 4 CANOS - Ocupa 4 espaços em linha RETA");   //Navio 2 - quatro canos
@@ -27,19 +87,21 @@ public class BatalhaNaval {
         gameplay.posicionarBoia();  //Navio 5 - boia
         //jogador ja escolheu posicionamento de seus navios
         
-        //Iniciando o jogo
+    }
+    
+    public static void verNavios(Jogo gameplay){
+        
         gameplay.limpaTela();
         gameplay.campoJogador.mostraNavios();
-        //gameplay.campoComputador.mostraNavios();  //para fins de testes
-        
         System.out.println("\n^^^ SEUS NAVIOS ESTÃO POSICIONADOS COMO INDICADO ACIMA! BOM JOGO! ^^^");
+        
+    }
+    
+    public static void iniciarJogo(Jogo gameplay){
+        
         System.out.println("\nIniciando o Jogo . . . . \n--------------------------------------------------------------------------------------------------------------------------\n");
         
         do{
-            /*System.out.println("SEU TABULEIRO");
-            gameplay.campoJogador.mostraTabuleiro();
-            System.out.println("\n--------------------------------------------------------------------------------------------------------------------------\n");
-            */
             
             System.out.println("TABULEIRO INIMIGO");
             gameplay.campoComputador.mostraTabuleiro();
