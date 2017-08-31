@@ -29,6 +29,7 @@ public class BatalhaNaval {
             System.out.println("2 - Ver Posicionamento de Seus Navios");
             System.out.println("3 - Iniciar o Jogo");
             System.out.println("4 - Sair");
+            System.out.print("Escolha uma Opção: ");
             opc = sc.nextInt();
             
             switch (opc){
@@ -91,10 +92,11 @@ public class BatalhaNaval {
     
     public static void verNavios(Jogo gameplay){
         
-        gameplay.limpaTela();
+        System.out.println("\n--------------------------------------------------------------------------------------------------------------------------\n");
         gameplay.campoJogador.mostraNavios();
-        System.out.println("\n^^^ SEUS NAVIOS ESTÃO POSICIONADOS COMO INDICADO ACIMA! BOM JOGO! ^^^");
-        
+        System.out.println("\n\t\t\t  ^^^ SEUS NAVIOS ESTÃO POSICIONADOS COMO INDICADO ACIMA! BOM JOGO! ^^^");
+        System.out.println("\n--------------------------------------------------------------------------------------------------------------------------\n");
+ 
     }
     
     public static void iniciarJogo(Jogo gameplay){

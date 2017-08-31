@@ -206,14 +206,14 @@ public class Jogo {
             break;
             
             case 0:
-                limpaTela();
+                //limpaTela();
                 System.out.println("\n--------------------------------------------------------------------------------------------------------------------------\n");
                 System.out.println("Você errou o disparo nas cordenadas-> " + (disparo[0]+1) + ":" + (disparo[1]+1));
                 tentativas++;
             break;
             
             case 1:
-                limpaTela();
+                //limpaTela();
                 System.out.println("\n--------------------------------------------------------------------------------------------------------------------------\n");
                 System.out.println("Você acertou o disparo nas cordenadas-> " + (disparo[0]+1) + ":" + (disparo[1]+1));
                 this.campoJogador.incrementaAcertos();
