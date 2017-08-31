@@ -29,7 +29,7 @@ public class BatalhaNaval {
             System.out.println("2 - Ver Posicionamento de Seus Navios");
             System.out.println("3 - Iniciar o Jogo");
             System.out.println("4 - Sair");
-            opc = Integer.parseInt(sc.nextLine());
+            opc = sc.nextInt();
             
             switch (opc){
                 
