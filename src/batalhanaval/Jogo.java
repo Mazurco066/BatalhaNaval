@@ -65,13 +65,13 @@ public class Jogo {
         
         do{
         System.out.println("Entre com a posição inicial e final (" + descricao + ")");
-        System.out.print("Coluna Inicial: ");
-        linhaInicial = sc.nextInt();
         System.out.print("Linha Inicial: ");
+        linhaInicial = sc.nextInt();
+        System.out.print("Coluna Inicial: ");
         colunaInicial = sc.nextInt();
-        System.out.print("Coluna Final: ");
+        System.out.print("Linha Final: ");
         linhaFinal = sc.nextInt();
-        System.out.print("Linha final: ");
+        System.out.print("Coluna final: ");
         colunaFinal = sc.nextInt();
         
         //abaixo do limite
