@@ -8,13 +8,13 @@ import java.util.Scanner;
  */
 public class Jogo {
     
-    /**
-     * @Attributes
-     * @campoJogador tabuleiro com os navios do jogador
-     * @campoComputador tabuleiro com os navios do computador
-     * @tentativa armazena o número de jogadas que o jogador fez
-     * @acertos armazena o número de acertos que o jogador fez
-     * @disparo armazena o disparo dado nos turnos
+    /*
+     * Attributes
+     * campoJogador -  tabuleiro com os navios do jogador.
+     * campoComputador - tabuleiro com os navios do computador.
+     * tentativa - armazena o número de jogadas que o jogador fez.
+     * acertos - armazena o número de acertos que o jogador fez.
+     * disparo - armazena o disparo dado nos turnos.
      */
     
     //Definindo atributos de jogo
@@ -26,9 +26,7 @@ public class Jogo {
     Mapa campoJogador;
     Mapa campoComputador;
     
-    /**
-     * @Jogo Construtor padrão da classe
-     */
+    //Construtor padrão da classe
     public Jogo(){
         
         //Inicializando os objetos instanciados
@@ -39,8 +37,10 @@ public class Jogo {
     }
     
     /**
-     * [getGanhou] método para ler ganhou em outra classe 
-     * @return retorna -1 se perdeu, 0 se não ha ganhador, e 1 se venceu 
+     * Método para ler ganhou em outra classe.
+     * 
+     * @return 
+     *      - retorna -1 se perdeu, 0 se não ha ganhador, e 1 se venceu.
      */
     public int getGanhou(){
         
@@ -48,14 +48,14 @@ public class Jogo {
     }
     
     /**
-     * @Métodos de Classe
-     * @posicionarNavio método que posiciona navio a partir de cordenadas do usuário
-     * @posicionarBoia método que posiciona o menor navio no tabuleiro
-     */
-    
-    /**
-     * @param tamanho recebe o quanto de espaço o navio ocupa no tabuleiro
-     * @param descricao recebe a descrição do navio que o para exibir na tela ao usuário
+     * Método para posicionar os navios de acordo com a entrada de coordenadas
+     * do usuário.
+     * 
+     * @param tamanho
+     *      - recebe o quanto de espaço o navio ocupa no tabuleiro.
+     * 
+     * @param descricao 
+     *      -recebe a descrição do navio que o para exibir na tela ao usuário.
      */
     public void posicionarNavio(int tamanho, String descricao){
         
@@ -140,7 +140,8 @@ public class Jogo {
     }
     
     /**
-     * [posicionarBoia] método que posiciona o menor navio
+     * Método que posiciona uma boia no tabuleiro de acordo com as coordenadas
+     * entradas pelo usuário.
      */
     public void posicionarBoia(){
         
@@ -177,7 +178,8 @@ public class Jogo {
     }
     
     /**
-     * [realizaDisparo] método que pega coordenadas do disparo com o usuário
+     * Método que pega coordenadas do disparo com o usuário
+     * e chama os métodos necessários para realizar o mesmo.
      */
     public void realizarDisparo(){
         
@@ -231,7 +233,7 @@ public class Jogo {
     }
     
     /**
-     * [realizarContraAtaque] método que realizara contra ataque do computador ao jogador
+     * Método que realizara contra ataque do computador ao jogador.
      */
     public void realizarContraAtaque(){
         
@@ -268,7 +270,7 @@ public class Jogo {
     }
     
     /**
-     * [verificaGanhador] método que verificara a cada jogada se um ganhador ja foi definido
+     * Método que verifica a cada jogada se um ganhador ja foi definido.
      */
     public void verificaGanhador(){
         
@@ -285,7 +287,7 @@ public class Jogo {
     }
     
     /**
-     * [limpaTela] método que funciona como um limpador de tela
+     * Método que funciona como um limpador de tela.
      */
     public void limpaTela(){
         

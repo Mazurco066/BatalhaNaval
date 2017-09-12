@@ -8,8 +8,9 @@ import java.util.Random;
 public class Mapa {
     
     /**
-     * @tabuleiro representa a matriz que armazena o campo de batalha
-     * @navios armazena a posição dos navios no campo
+     * Atributos de Classe
+     * tabuleiro - representa a matriz que armazena o campo de batalha
+     * navios - armazena a posição dos navios no campo
      */
     
     //Atributos
@@ -26,8 +27,10 @@ public class Mapa {
     }
     
     /**
-     * [getAcertos] método para ler acertos em outra classe 
-     * @return retorna a quantidade de acertos 
+     * Método para ler acertos em outra classe.
+     * 
+     * @return 
+     *      - retorna a quantidade de acertos.
      */
     public int getAcertos(){
         
@@ -35,24 +38,16 @@ public class Mapa {
     }
     
     /**
-     * [Método para incrementar acertos]
+     * Método para incrementar acertos.
      */
     public void incrementaAcertos(){
         
         acertos++;
     }
     
-    /**
-     * @Metodos de Classe
-     * @mostraTabuleiro método para imprimir o tabuleiro inimigo no console
-     * @posicionarNavios método que registra navios a partir de coordenadas dadas pelo usuário
-     * @sortearNavios método que sorteia posição de navios aleatóriamente
-     * @verificaAcerto método que verifica se ao dar o tiro acertou navio inimigo
-     * @verificaDisponibilidade método que retorna true se posição escolhida estiver disponivel
-     */
     
     /**
-     * [mostraTabuleiro] Imprime a matriz 15 por 15 de tabuleiro do jogo na tela
+     * Imprime a matriz 15 por 15 de tabuleiro do jogo na tela.
      */
     public void mostraTabuleiro(){
         
@@ -89,7 +84,7 @@ public class Mapa {
     }
     
     /**
-     * [mostraNavios] Imprime a matrix 15 por 15 de posicionamento de navios na tela
+     * Imprime a matrix 15 por 15 de posicionamento de navios na tela.
      */
     public void mostraNavios(){
         
@@ -121,10 +116,21 @@ public class Mapa {
     }
     
     /**
-     * @param li = linha que faz parte coordenada inicial
-     * @param lf = linha que faz parte coordenada final   
-     * @param ci = coluna que faz parte coordenada inicial
-     * @param cf = coluna que faz parte coordenada final
+     * Método feito para posicionar návios no mapa do jogo
+     * de acordo com as coordenadas recebidas e já validadas
+     * pela classe jogo.
+     * 
+     * @param li 
+     *      - linha que faz parte coordenada inicial.
+     * 
+     * @param lf 
+     *      - linha que faz parte coordenada final.
+     * 
+     * @param ci 
+     *      - coluna que faz parte coordenada inicial.
+     * 
+     * @param cf 
+     *      - coluna que faz parte coordenada final.
      */
     public void posicionarNavios(int li, int lf, int ci, int cf){
         
@@ -166,12 +172,25 @@ public class Mapa {
         
     }
     
-    /*
-     * @param li = linha que faz parte coordenada inicial
-     * @param lf = linha que faz parte coordenada final   
-     * @param ci = coluna que faz parte coordenada inicial
-     * @param cf = coluna que faz parte coordenada final
-     * @return - Retorna true se estiver disponivel e false se estiver ocupada por outro navio
+    /**
+     * Método para validar se uma posição escolhida pelo usuário está
+     * disponivel para o posicionamento d eum novo navio.
+     * 
+     * @param li 
+     *      - linha que faz parte coordenada inicial.
+     *
+     * @param lf 
+     *      - linha que faz parte coordenada final. 
+     *
+     * @param ci 
+     *      - coluna que faz parte coordenada inicial.
+     *
+     * @param cf 
+     *      - coluna que faz parte coordenada final.
+     * 
+     * @return 
+     *      - Retorna true se estiver disponivel e false se estiver ocupada por outro navio.
+     *
      */
     public boolean verificaDisponibilidade(int li, int lf, int ci, int cf){
         
@@ -221,7 +240,8 @@ public class Mapa {
     }
     
     /**
-     * [sortearNavios] distribui Randomicamente os Navios
+     * Método que distribui Randomicamente os Navios pelo mapa em 
+     * posição vertical.
      */
     public void sortearNavios(){
         
@@ -298,8 +318,14 @@ public class Mapa {
     }
     
     /**
-     * @param tiro recebe coordenadas do disparo efetuado
-     * @return retorna true se acertou o disparo e false se errou
+     * Método que verifica se um disparo efetuado pelo usuário ou
+     * computador acertou ou não um navio inimigo.
+     * 
+     * @param tiro
+     *      - recebe coordenadas do disparo efetuado.
+     * 
+     * @return 
+     *      - retorna true se acertou o disparo e false se errou.
      */
     public int verificaAcerto(int tiro[]){
         

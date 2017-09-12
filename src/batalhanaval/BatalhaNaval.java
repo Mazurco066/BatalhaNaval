@@ -9,10 +9,10 @@ public class BatalhaNaval {
     
     public static void main(String[] args) {
         /**
-         *   @Descrição Jogo batalha naval feito em java
-         *   @Objetivo Desenvolver um jogo batalha naval em java para disciplina de POO
-         *   @Desenvolvedor Gabriel Mazurco Ribeiro
-         *   @GitHub https://github.com/Mazurco066
+         *   Descrição - Jogo batalha naval feito em java.
+         *   Objetivo - Desenvolver um jogo batalha naval em java para disciplina de POO.
+         *   Desenvolvedor - Gabriel Mazurco Ribeiro.
+         *   GitHub - https://github.com/Mazurco066
          */
         
         //Instanciando Objeto do tipo jogo para controlar a jogatina
@@ -78,6 +78,26 @@ public class BatalhaNaval {
         
     }
     
+    /**
+     * Método Estatico para organização em menu do método main.
+     * 
+     * OBSERVAÇÃO - para posicionar seus návios use a seguinte lógica:
+     * 
+     * 1. Entre com as Coordenadas de onde ficará localizado o inicio do navio
+     * desejado a se posicionar.
+     * 
+     * 2. Para entra com as coordenadasde onde ficará o final do navio some 
+     * o tamanho do navio - 1 a sua linha ou couluna inicialmente digitada
+     * mantenha ao menos linha inicial = linha final ou coluna inicial = coluna final
+     * para que o náveio fique em linha reta omo especificado. Caso contrário as validações
+     * implementadas irão alertar o erro e pedir para que você reposicione seus návios
+     * 
+     * 3. Se tudo ocorrer bem você poderá prosseguir vendo seus navios ja posicionados em campo
+     * e também iniciar seu jogo normalmente.
+     * 
+     * @param gameplay
+     *      - recebe o jogo que está em execução pelo programa.
+     */
     public static void posicionar(Jogo gameplay){
         
         //jogador escolhe onde posicionará seus navios
@@ -90,6 +110,12 @@ public class BatalhaNaval {
         
     }
     
+    /**
+     * Método Estatico para organização em menu do método main.
+     * 
+     * @param gameplay 
+     *      - recebe o jogo que está em execução pelo programa.
+     */
     public static void verNavios(Jogo gameplay){
         
         System.out.println("\n--------------------------------------------------------------------------------------------------------------------------\n");
@@ -99,6 +125,12 @@ public class BatalhaNaval {
  
     }
     
+    /**
+     * Método Estatico para organização em menu do método main.
+     * 
+     * @param gameplay 
+     *      - recebe o jogo que está em execução pelo programa.
+     */
     public static void iniciarJogo(Jogo gameplay){
         
         System.out.println("\nIniciando o Jogo . . . . \n--------------------------------------------------------------------------------------------------------------------------\n");
